@@ -12,6 +12,10 @@ function Search({ results }) {
     <div>
       <Head>
         <title>{router.query.term} - Google Search</title>
+        <link
+          rel="icon"
+          href="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png"
+        />
       </Head>
 
       {/* Header */}
@@ -25,7 +29,7 @@ function Search({ results }) {
 export default Search;
 
 export async function getServerSideProps(context) {
-  const useDummyData = true;
+  const useDummyData = false;
   const startIndex = context.query.start || 0;
   const data = useDummyData
     ? Response
